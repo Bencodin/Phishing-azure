@@ -8,7 +8,7 @@ La seule information que l’on avont c’est un nom de domaine
 
 - [international-am.com](http://international-am.com/)
 
-Initial footwork
+# Initial footwork
 
 Notre premiere etape est de prendre des renseignements sur ce domaine.
 
