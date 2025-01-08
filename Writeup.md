@@ -277,7 +277,7 @@ On a donc les differentes information qui nous sont générer
 
 Nous devons maintenant créer un script qui interroge en continu le point de terminaison du jeton et interroge l'état d'authentification. En cas d'authentification réussie, le script imprimera notre jeton d'accès (bien qu'un jeton d'actualisation plus précieux soit également stocké dans la variable).
 
-Création d’un script python pour la reception du mail et l’attente qui est disponible sur mon github à l’adresse suivante https://github.com/Bencodin/Phishing-azure.git
+Création d’un script python pour la reception du mail et l’attente qui est disponible ici ![mail.py](mail.py)
 
 ```python
 import requests
