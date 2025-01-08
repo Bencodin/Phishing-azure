@@ -1,14 +1,22 @@
-# PwnedLabs - Leverage Device Code Phishing for Initial Access
+# 🛡️ PwnedLabs - Leverage Device Code Phishing for Initial Access
 
-# Scénario
+## 🎯 Scénario
 
-Notre client International Asset Management nous a demandé de réaliser une mission de red team. Il souhaite que nous commencions en externe comme le ferait un acteur malveillant, en en essayant de pénétrer son environnement et d'accéder aux ressources appartenant à son directeur ou à ses cadres supérieurs. Le phishing est dans le champ d'application, et les partenaires informatiques d'International Asset Management ont également accepté d'être inclus dans le test.
+Notre client **International Asset Management** nous a mandatés pour une mission de **red team**. L'objectif est de simuler une attaque externe, comme le ferait un acteur malveillant, afin de :
 
-La seule information que l’on avont c’est un nom de domaine 
+- Pénétrer l'environnement de l'entreprise.
+- Accéder aux ressources critiques appartenant au directeur ou aux cadres supérieurs.
 
-- [international-am.com](http://international-am.com/)
+**Techniques autorisées :**  
+📧 Le phishing est dans le champ d'application, incluant les partenaires informatiques d'International Asset Management.
 
-# Initial footwork
+**Point de départ :**  
+📝 La seule information initiale dont nous disposons est un nom de domaine :
+
+- 🌐 [international-am.com](http://international-am.com/)
+
+
+## 🕵️‍♂️ Initial Footwork
 
 Notre premiere etape est de prendre des renseignements sur ce domaine.
 
