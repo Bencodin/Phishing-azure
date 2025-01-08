@@ -12,7 +12,7 @@ Initial footwork
 
 Notre premiere etape est de prendre des renseignements sur ce domaine.
 
-![Capture d’écran du 2025-01-07 13-34-12.png](/Image/_13-34-12.png)
+![Capture d’écran du 2025-01-07 13-34-12.png](Image/_13-34-12.png)
 
 Différente information nous sont données que l’on peut scindé en 4 record différent
 
