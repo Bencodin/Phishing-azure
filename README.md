@@ -1,3 +1,7 @@
+## Défi Pwned Labs
+
+Ce script a été développé dans le cadre d'un challenge Pwned Labs, pour illustrer une méthode d'authentification.
+
 # Exemple d'authentification avec code d'appareil
 
 Ce script illustre comment implémenter l'authentification avec code d'appareil en utilisant le point de terminaison OAuth2 de Microsoft. Il permet aux utilisateurs de s'authentifier auprès d'Azure Active Directory (AAD) pour obtenir des jetons d'accès et de rafraîchissement afin d'accéder à des ressources comme Microsoft Graph.
@@ -59,7 +63,3 @@ Refresh Token: MIIEvAIBADANBg...
 - Assurez-vous de gérer les informations sensibles comme les jetons d'accès de manière sécurisée. Ne les consignez pas dans des environnements de production.
 - Ce script est conçu pour des fins éducatives. Pour une utilisation en production, envisagez d'ajouter une gestion des erreurs appropriée et des mesures de sécurité.
 - Consultez la [documentation Microsoft Authentication](https://learn.microsoft.com/fr-fr/azure/active-directory/develop/) pour plus de détails sur l'authentification avec code d'appareil.
-
-## Défi Pwned Labs
-
-Ce script a été développé dans le cadre d'un challenge Pwned Labs, pour illustrer une méthode d'authentification et interagir avec des services protégés par OAuth2.
