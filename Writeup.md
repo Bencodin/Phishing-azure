@@ -64,24 +64,6 @@ Différente information nous sont données que l’on peut scindé en 4 record d
 
 # Énumération de sous domaine
 
-explication d’un sous domaine
-
-![image.png](Image/image.png)
-
-Le sous-domaine est une partie clé de l’URL qui se situe **avant le domaine principal** (ici `exemple.com`) et est séparé par un point.
-
----
-
-### **Rôle du sous-domaine**
-
-1. **Organisation du contenu** :
- - Le sous-domaine permet de structurer un site web en séparant différents types de contenu ou fonctionnalités.
- - Par exemple, `blog.exemple.com` pourrait être utilisé pour héberger un blog, tandis que `shop.exemple.com` pourrait être dédié à une boutique en ligne.
-2. **Indépendance relative** :
- - Les sous-domaines fonctionnent comme des entités distinctes du domaine principal. Ils peuvent avoir leurs propres fichiers, configurations, ou même être hébergés sur des serveurs différents.
-
-La prochaine étape interessante est l’énumération de sous-domaine qui nous permet de découvrir si l’organisation utilise des applications ou d’autres service exposés via un autre sous domaine
-
 ## Énumération avec sublist3r
 
 **Sublist3r** est un outil d’OSINT (Open-Source Intelligence) conçu pour **recenser les sous-domaines** d’un domaine cible. Il est principalement utilisé pour la reconnaissance (phase de collecte d'informations)
