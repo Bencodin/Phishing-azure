@@ -246,8 +246,6 @@ avec les éléments ci dessus donc client\_ID et ressource
 - **Type de requête** : POST
  - Utilisé pour envoyer des données au serveur (dans ce cas-là, des paramètres pour obtenir un code d'appareil).
 - L’URL cible pointe vers l’endpoint `devicecode` d’Azure AD, utilisé dans le cadre du flux OAuth2 Device Code.
-- **Paramètre de requête** :
- - `api-version=1.0` : Spécifie la version de l’API utilisée.
 
 En-têtes:
 
