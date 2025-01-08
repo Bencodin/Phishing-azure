@@ -134,7 +134,7 @@ La première chose à regarder dans notre scoop est donc la partie web
 
 Exemple dans notre cas mais non utile:
 
-**`20.75.112.13** international-am.com`
+`20.75.112.13 international-am.com`
 
 Premièrement accédons à l’url [`https://international-am.com/`](https://international-am.com/)
 
