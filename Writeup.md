@@ -150,17 +150,18 @@ On y voit plusieurs fichier html comme `about.html`, `contact.html` , `portal.ht
 
 ## Contenu de portal.html
 
-On peut voir deux champs Username et password, en essayant de rentrer des informations pour voir comment l’application réagit
+On peut voir deux champs Username et password. 
+Essayons de rentrer des informations pour voir comment l’application réagit.
 
 ![image.png](Image/image%206.png)
 
-en rentrant des données aléatoire dans les champs username/password
+En rentrant des données aléatoire dans les champs username/password
 
 ![image.png](Image/image%207.png)
 
-on a un invalid login qui est renvoyé mais ceux qui sont interessant c’est une adresse mail dans notre cas `support@international-am.com`
+On a un invalid login qui est renvoyé , la seule information intéressante c’est une adresse mail dans notre cas `support@international-am.com`
 
-En fouillant le reste du site web , nous ne trouvons pas d’autres information utile
+En fouillant le reste du site web , nous ne trouvons pas d’autres information utile.
 
 Tentant d’exploiter cette adresse mail via notamment une attaque par phishing
 
@@ -213,7 +214,6 @@ La première étape consiste à effectuer une requête http POST sur le point de
 
 ```
  https://login.microsoftonline.com/common/oauth2/devicecode?api-version=1.0
-
 ```
 
 J'utilise les paramètres suivants. J'ai choisi d'utiliser le client\_id « Office.com » car il semble être le nom d'application le plus légitime sinon on utilisera celui de microsoft office car il donne aussi accès à l’api GRAPH
@@ -375,7 +375,7 @@ En se renseignant microsoft nous indiques que l’access token générés est en
 
 ![image.png](Image/image%2012.png)
 
-Option 2 : Utiliser graphrunner avec l’utilisation de Get-GraphTokens
+## Option 2 : Utiliser graphrunner avec l’utilisation de Get-GraphTokens
 
 Après avoir cloner le repot sur git
 
@@ -386,7 +386,7 @@ Get-GraphTokens
 
 ![image.png](Image/image%2013.png)
 
-on se connecte avec le token 
+On se connecte avec le token , avec les commandes suivantes
 
 ![Capture d’écran du 2025-01-08 09-55-31.png](Image/Capture_dcran_du_2025-01-08_09-55-31.png)
 
@@ -431,7 +431,7 @@ Web URL: [https://iancloudpwned.sharepoint.com/Style](https://iancloudpwned.shar
 
 On peut se connecter aussi avec le client azure
 
-Il faut pour cette exemple renvoyer un email à l’utilisateur avec ce nouveau device code
+Il faut pour cette exemple renvoyer un email à l’utilisateur avec ce nouveau device code.
 
 ![image.png](Image/image%2014.png)
 
@@ -575,7 +575,7 @@ az staticwebapp appsettings list --name InternationalAssetManager
 }
 ```
 
-On peut voir qu’une base de donnée tourne sur le port 1433 et on a aussi des creds `ID=admin;Password=IntAM-P@ss123`
+On peut voir qu’une base de donnée tourne sur le port 1433 et on a aussi des creds `ID=ad***;Password=******`
 
 En en essayant de se connecter cela est impossible de faire la résolution de nom de `iamclientportal.database.windows.net`
 
@@ -702,9 +702,9 @@ Plusieurs information sont intéressantess notamment que l’ont a des droits re
 
 On a une information intéressantes notamment que le remote access est activé 
 
-On se rappelle que l’ont a des creds de la base de donnée initialement on pourrait trouver un moyen de se connecter à cette machine en en essayant ces identifiants.
+On se rappelle que l’ont a des creds de la base de donnée initialement, on pourrait trouver un moyen de se connecter à cette machine en essayant ces identifiants.
 
-Il faudrait tout d’abord avoir un nom de machine ou une ip si cette machine est exposé étant donnée que c’est surement la machine qui héberge le site web celle ci est surement exposés
+Il faudrait tout d’abord avoir un nom de machine ou une ip si cette machine est exposé étant donnée que c’est sûrement la machine qui héberge le site web celle ci est surement exposés.
 
 En se renseignant un module [https://learn.microsoft.com/fr-fr/cli/azure/network/public-ip?view=azure-cli-latest](https://learn.microsoft.com/fr-fr/cli/azure/network/public-ip?view=azure-cli-latest) az network public-ip existe pour gérer les adresses ips publiques.
 
@@ -740,7 +740,7 @@ Global Arguments
  --verbose : Increase logging verbosity. Use --debug for full debug logs.
 ```
 
-D’après l’aide on à déja 2 information que l’on connait déja donc le —name qui est égale à SECURITYDIRECTOR et le —ressource-group qui est égale à mbt-rg-22 en essayant la commande suivante:
+On à déja 2 information que l’on connait déja donc le —name qui est égale à SECURITYDIRECTOR et le —ressource-group qui est égale à mbt-rg-22 en essayant la commande suivante:
 
 ```python
 az network public-ip show --resource-group mbt-rg-22 --name SECURITYDIRECTOR
@@ -784,8 +784,7 @@ az network public-ip show --resource-group mbt-rg-22 --name SECURITYDIRECTORip30
 }
 ```
 
-On a donc notre adresse ip 20.127.161.82
-
+On a donc notre adresse ip ==20.127.161.82==
 La prochaine étape est de trouver une porte d’entrée pour se connecter donc voir si on peut se connecter avec des outils comme evilWinRM ou en rdp etc…
 
 Un port souvent ouvert pour la connexion a distance est le port 3389 qui est le port RDP par défaut
