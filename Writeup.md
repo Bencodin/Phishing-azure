@@ -22,7 +22,7 @@ Notre premiere etape est de prendre des renseignements sur ce domaine.
 
 ![Capture d’écran du 2025-01-07 13-34-12.png](Image/Capture_dcran_du_2025-01-07_13-34-12.png)
 
-Différente information nous sont données que l’on peut scinder en 4 record différent
+Différente information nous sont données que l’on peut scinder en 4 records différents
 
 ### 1. **A Records**
 
@@ -74,7 +74,7 @@ Dans cette exemple nous allons utilsier sublist3r avec l’argument -d qui spéc
 
 ![image.png](Image/image%202.png)
 
-On peut voir que on ai que sur du passif , et sublist3r va regarder sur les differents site internet presente ci-dessus si [international-am.com](http://international-am.com) reponds avec un sous domaine
+On peut voir qu'on est que sur du passif , et sublist3r va regarder sur les differents site internet presente ci-dessus si [international-am.com](http://international-am.com) reponds avec un sous domaine
 
 Nous allons utiliser l’argument -b pour faire un bruteforce de sous-domaine
 
