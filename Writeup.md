@@ -114,7 +114,7 @@ On peut croiser l’information avec d'autres outils connus comme shodan , fofa 
 
 # Découverte des services sur le nom de domaine
 
-La première chose à regarder dans notre scoop est donc la partie web
+La première chose à regarder dans notre scope est donc la partie web
 
 **Petit tips** : Dans certains cas l’accès au nom de domaine directement via le navigateur peut ne pas fonctionner dans certains cas une méthode simple sur linux et de en mettant une IP dans le fichier `/etc/hosts` cela permet de mapper un nom de domaine à une IP pour contourner le DNS standard et accéder directement à un site ou service. Cela est utile pour :
 
