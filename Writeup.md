@@ -98,7 +98,7 @@ Nous avons obtenu l'adresse IP du site Web à partir de l'enregistrement d'hôte
 
 Nous pouvons utiliser ipinfo pour avoir plus d’information sur l’ip
 
-Pour confirmer que l’entreprise utilise office 365 et azure on peut utiliser **getuserrealm.srf** c’est information était déjà plus ou moins sûr avec notamment l’utilisartion de outlook pour la partie mail ainsi que le portail microsoft azure web.
+Pour confirmer que l’entreprise utilise office 365 et azure on peut utiliser **getuserrealm.srf** ces informations étaient déjà plus ou moins sûres avec notamment l’utilisation d'outlook pour la partie mail ainsi que le portail microsoft azure web.
 
 ![Capture d’écran du 2025-01-07 14-35-47.png](Image/Capture_dcran_du_2025-01-07_14-35-47.png)
 
