@@ -130,13 +130,13 @@ Premièrement accédons à l’url [`https://international-am.com/`](https://int
 
 ![image.png](Image/image%205.png)
 
-avant de se concentrer sur les fonctionnalités la première phase est de comprendre les technologies utilisés sur notre site web utilisons un outil comme wappalyzer
+Avant de se concentrer sur les fonctionnalités la première phase est de comprendre les technologies utilisés sur notre site web utilisons un outil comme wappalyzer
 
-celui ci nous donne plusieurs informations sur les sécurités mise en place, les technos utilisés etc..
+Celui ci nous donne plusieurs informations sur les sécurités mise en place, les technos utilisés etc..
 
 ![Capture d’écran du 2025-01-07 14-54-27.png](Image/Capture_dcran_du_2025-01-07_14-54-27.png)
 
-on peut se renseigner aussi via les différentes requêtes effectués sur le site web grace notamment a burpsuite.
+On peut se renseigner aussi via les différentes requêtes effectués sur le site web grace notamment a burpsuite.
 
 Qui nous permet dans l’onglet de gauche les differentes urls requêtés 
 
