@@ -116,7 +116,7 @@ On peut croiser l’information avec d'autres outils connus comme shodan , fofa 
 
 La première chose à regarder dans notre scope est donc la partie web
 
-**Petit tips** : Dans certains cas l’accès au nom de domaine directement via le navigateur peut ne pas fonctionner dans certains cas une méthode simple sur linux et de en mettant une IP dans le fichier `/etc/hosts` cela permet de mapper un nom de domaine à une IP pour contourner le DNS standard et accéder directement à un site ou service. Cela est utile pour :
+**Petit tips** : Dans certains cas l’accès au nom de domaine directement via le navigateur peut ne pas fonctionner dans certains cas une méthode simple sur linux consiste à mettre une IP dans le fichier `/etc/hosts` cela permet de mapper un nom de domaine à une IP pour contourner le DNS standard et accéder directement à un site ou service. Cela est utile pour :
 
 1. **Contourner le DNS** : Accéder à un site même si le DNS n'est pas configuré ou bloqué.
 2. **Tester des environnements** : Rediriger un domaine vers une IP pour tester une application ou un serveur en préproduction.
@@ -130,21 +130,21 @@ Premièrement accédons à l’url [`https://international-am.com/`](https://int
 
 ![image.png](Image/image%205.png)
 
-Avant de se concentrer sur les fonctionnalités la première phase est de comprendre les technologies utilisés sur notre site web utilisons un outil comme wappalyzer
+Avant de se concentrer sur les fonctionnalités la première phase est de comprendre les technologies utilisées sur notre site web. Utilisons un outil comme wappalyzer
 
-Celui ci nous donne plusieurs informations sur les sécurités mise en place, les technos utilisés etc..
+Celui ci nous donne plusieurs informations sur les sécurités mise en place, les technos utilisées etc..
 
 ![Capture d’écran du 2025-01-07 14-54-27.png](Image/Capture_dcran_du_2025-01-07_14-54-27.png)
 
-On peut se renseigner aussi via les différentes requêtes effectués sur le site web grace notamment a burpsuite.
+On peut se renseigner aussi via les différentes requêtes effectuées sur le site web grace notamment a burpsuite.
 
-Dans l’onglet de gauche on peut voir les differentes urls requêtés 
+Dans l’onglet de gauche on peut voir les differentes urls requêtées 
 
 En bas les requêtes et les réponses 
 
-On peut notamment déjà avoir un aperçu niveau sécurité en regarder les headers de sécurité mise en place sur le site web
+On peut notamment déjà avoir un aperçu niveau sécurité en regarder les headers de sécurité mis en place sur le site web
 
-On y voit plusieurs fichier html comme `about.html`, `contact.html` , `portal.html` on peut se rendre sur chacun de ces sites pour en vérifier le contenu.
+On y voit plusieurs fichiers html comme `about.html`, `contact.html` , `portal.html` on peut se rendre sur chacun de ces sites pour en vérifier le contenu.
 
 ![Capture d’écran du 2025-01-07 15-02-32.png](Image/Capture_dcran_du_2025-01-07_15-02-32.png)
 
@@ -155,19 +155,19 @@ Essayons de rentrer des informations pour voir comment l’application réagit.
 
 ![image.png](Image/image%206.png)
 
-En rentrant des données aléatoire dans les champs username/password
+En rentrant des données aléatoires dans les champs username/password
 
 ![image.png](Image/image%207.png)
 
 On a un invalid login qui est renvoyé , la seule information intéressante c’est une adresse mail dans notre cas `support@international-am.com`
 
-En fouillant le reste du site web , nous ne trouvons pas d’autres information utile.
+En fouillant le reste du site web , nous ne trouvons pas d’autres informations utiles.
 
-Tentant d’exploiter cette adresse mail via notamment une attaque par phishing
+Tentons d’exploiter cette adresse mail via notamment une attaque par phishing
 
 # **Nouvelle technique de phishing : authentification par code d'appareil**
 
-En se renseignant sur une internet plusieurs méthode existe :
+En se renseignant sur internet plusieurs méthodes existent :
 
 - **Phishing classique par imitation du portail Azure**.
 - **Phishing par emails liés à Microsoft 365 et Azure (alertes, factures, paiements)**.
@@ -180,7 +180,7 @@ En se renseignant sur une internet plusieurs méthode existe :
 - **Attaques via le partage de liens de ressources Azure**.
 - **Redirection d’authentification Azure AD vers des pages malveillantes**.
 
-Dans notre scénario les deux qui pourrait être interessante serait :
+Dans notre scénario les deux qui pourraient être interessants seraient :
 
 - **Phishing par code appareil**
 - **Attaques via le partage de liens de ressources Azure**
@@ -229,7 +229,7 @@ En se renseignant sur internet il faut faire une requête POST à l’url suivan
 
 https://login.microsoftonline.com/common/oauth2/devicecode?api-version=1.0
 
-avec les éléments ci dessus donc client\_ID et ressource
+avec les éléments ci-dessus donc client\_ID et ressource
 
 ## Utilisation de insomnia pour la requête
 
@@ -250,7 +250,7 @@ On configure le body avec nos deux valeurs client\_id et ressource
 
 ![image.png](Image/image%208.png)
 
-réponse reçu:
+réponse reçue:
 
 ```python
 {
@@ -263,7 +263,7 @@ réponse reçu:
 }
 ```
 
-On a donc les differentes information qui nous sont générer
+On a donc les differentes information qui nous sont générées
 
 Nous devons maintenant créer un script qui interroge en continu le point de terminaison du jeton et interroge l'état d'authentification. En cas d'authentification réussie, le script imprimera notre jeton d'accès (bien qu'un jeton d'actualisation plus précieux soit également stocké dans la variable).
 
@@ -356,7 +356,7 @@ On envoie un mail à l’utilisateur
 
 ![Capture d’écran du 2025-01-07 16-57-07.png](Image/Capture_dcran_du_2025-01-07_16-57-07.png)
 
-En attendant 5 min je n’ai toujours pas de réponse, je pense que le problème réside dans l’application utilise au départ donc [office.com](http://office.com) je vais utiliser ces informations
+En attendant 5 min je n’ai toujours pas de réponse, je pense que le problème réside dans l’application utilisée au départ donc [office.com](http://office.com) je vais utiliser ces informations
 
 | **Paramètre** | **Valeur** |
 | --- | --- |
@@ -365,11 +365,11 @@ En attendant 5 min je n’ai toujours pas de réponse, je pense que le problème
 
 ![image.png](Image/image%209.png)
 
-On refait le même processus avec l’envoie de mail et on a donc une réponse avec le token
+On refait le même processus avec l’envoi de mail et on a donc une réponse avec le token
 
 ![image.png](Image/image%2010.png)
 
-En se renseignant microsoft nous indiques que l’access token générés est enfaite un token jwt( json web token) , on peut le décoder avec un outil comme jwt.io
+En se renseignant microsoft nous indique que l’access token généré est en réalité un token jwt(json web token) , on peut le décoder avec un outil comme jwt.io
 
 ![image.png](Image/image%2011.png)
 
@@ -377,7 +377,7 @@ En se renseignant microsoft nous indiques que l’access token générés est en
 
 ## Option 2 : Utiliser graphrunner avec l’utilisation de Get-GraphTokens
 
-Après avoir cloner le repot sur git
+Après avoir clôné le repot sur git
 
 ```python
 Import-Module .\GraphRunner.ps1
@@ -386,11 +386,11 @@ Get-GraphTokens
 
 ![image.png](Image/image%2013.png)
 
-On se connecte avec le token , avec les commandes suivantes
+On se connecte avec le token, avec les commandes suivantes:
 
 ![Capture d’écran du 2025-01-08 09-55-31.png](Image/Capture_dcran_du_2025-01-08_09-55-31.png)
 
-Lançons la commande Invoke-CheckAccess et on passe notre token en argument
+Lançons la commande Invoke-CheckAccess et on passe notre token en argument:
 
 ```python
 Invoke-CheckAccess -Tokens $tokens
@@ -409,7 +409,7 @@ userPrincipalName : [support@international-am.com](mailto:support@international-
 id : 4be78737-a40a-477f-9419-71ea104f644d
 ```
 
-On peut faire bcp de choses avec le tokens comme par exemple lister les partages sur sharepoint
+On peut faire beaucoup de choses avec le token comme par exemple lister les partages sur sharepoint:
 
 ```python
 Get-SharePointSiteURLs -Tokens $tokens
@@ -429,13 +429,13 @@ Web URL: [https://iancloudpwned.sharepoint.com/sites/DefaultDirectory/Style](htt
 Web URL: [https://iancloudpwned.sharepoint.com/Style](https://iancloudpwned.sharepoint.com/Style) Library/Forms/AllItems.aspx
 ```
 
-On peut se connecter aussi avec le client azure
+On peut se connecter aussi avec le client azure:
 
-Il faut pour cette exemple renvoyer un email à l’utilisateur avec ce nouveau device code.
+Il faut pour cet exemple renvoyer un email à l’utilisateur avec ce nouveau device code:
 
 ![image.png](Image/image%2014.png)
 
-Listons les ressources 
+Listons les ressources:
 
 ```python
 az resource list 
@@ -549,15 +549,15 @@ az resource list
 
 On peut voir plusieurs ressource intéressantes InternationnalAssetManager qui est en type static site ainsi que SECURITY-DIRECTOR en type virtual machine
 
-Commençons par lister le site static
+Commençons par lister le site static:
 
-On se renseignant sur internet , on peut voir que l’on peut énumerer avec `az staticwebapp`
+En se renseignant sur internet , on peut voir que l’on peut énumerer avec `az staticwebapp`:
 
 ![Capture d’écran du 2025-01-08 10-42-42.png](Image/Capture_dcran_du_2025-01-08_10-42-42.png)
 
 Nous pouvons en déduire que c’est le domaine initial qui héberge le site web que l’on a vu au début du chall
 
-Listons des à present les settings de l’app
+Listons à present les settings de l’app:
 
 ```python
 az staticwebapp appsettings list --name InternationalAssetManager
@@ -579,7 +579,7 @@ On peut voir qu’une base de donnée tourne sur le port 1433 et on a aussi des 
 
 En en essayant de se connecter cela est impossible de faire la résolution de nom de `iamclientportal.database.windows.net`
 
-Listons la ressource SECURITY-DIRECTOR 
+Listons la ressource SECURITY-DIRECTOR:
 
 ![image.png](Image/image%2015.png)
 
@@ -679,11 +679,11 @@ az vm show --resource-group mbt-rg-22 --name SECURITY-DIRECTOR
 }
 ```
 
-Faisons une requête sur l’id suivant lister précedemment
+Faisons une requête sur l’id listé précedemment
 
 `https://management.azure.com/subscriptions/ceff06cb-e29d-4486-a3ae-eaaec5689f94/resourceGroups/mbt-rg-22/providers/Microsoft.Compute/virtualMachines/SECURITY-DIRECTOR?api-version=2021-07-01&$expand=userData`
 
-Sur cette endpoint il faut passer dans le header le bearer qui contient l’access token de notre utilisateur voici un moyen de le générer
+Sur cet endpoint il faut passer dans le header le bearer qui contient l’access token de notre utilisateur voici un moyen de le générer:
 `az account get-access-token` 
 
 ![image.png](Image/image%2016.png)
@@ -692,23 +692,23 @@ On peut voir le token de type bearer
 
 On peut ensuite le mettre dans une variable comme sur le screen pour l’utiliser plus tard
 
-Utilisons insomnia pour voir ce que ça nous renvoies
+Utilisons insomnia pour voir ce que ça nous renvoies:
 
 ![image.png](Image/image%2017.png)
 
-Plusieurs information sont intéressantess notamment que l’ont a des droits read and write et un champs userData qui contient une string essayons de la décoder avec cyberchef qu’il détecte comme étant du base64
+Plusieurs information sont intéressantess notamment que l’on a des droits read and write et un champ userData qui contient une string essayons de la décoder avec cyberchef qu’il détecte comme étant du base64
 
 ![image.png](Image/image%2018.png)
 
-On a une information intéressantes notamment que le remote access est activé 
+On a une information intéressante notamment que le remote access est activé 
 
-On se rappelle que l’ont a des creds de la base de donnée initialement, on pourrait trouver un moyen de se connecter à cette machine en essayant ces identifiants.
+On se rappelle que l’on a des creds de la base de donnée, on pourrait trouver un moyen de se connecter à cette machine en essayant ces identifiants.
 
-Il faudrait tout d’abord avoir un nom de machine ou une ip si cette machine est exposé étant donnée que c’est sûrement la machine qui héberge le site web celle ci est surement exposés.
+Il faudrait tout d’abord avoir un nom de machine ou une ip si cette machine est exposée étant donnée que c’est sûrement la machine qui héberge le site web celle-ci est surement exposée.
 
-En se renseignant un module [https://learn.microsoft.com/fr-fr/cli/azure/network/public-ip?view=azure-cli-latest](https://learn.microsoft.com/fr-fr/cli/azure/network/public-ip?view=azure-cli-latest) az network public-ip existe pour gérer les adresses ips publiques.
+En se renseignant sur un module [https://learn.microsoft.com/fr-fr/cli/azure/network/public-ip?view=azure-cli-latest](https://learn.microsoft.com/fr-fr/cli/azure/network/public-ip?view=azure-cli-latest) az network public-ip existe pour gérer les adresses ips publiques.
 
-Notre but est d’obtenir cette adresse ip on peut utiliser l’option show
+Notre but est d’obtenir cette adresse ip, on peut utiliser l’option show
 
 ```python
 az network public-ip show -h 
@@ -740,7 +740,7 @@ Global Arguments
  --verbose : Increase logging verbosity. Use --debug for full debug logs.
 ```
 
-On à déja 2 information que l’on connait déja donc le —name qui est égale à SECURITYDIRECTOR et le —ressource-group qui est égale à mbt-rg-22 en essayant la commande suivante:
+On a déja 2 information que l’on connait déja donc le —name qui est égal à SECURITYDIRECTOR et le —ressource-group qui est égal à mbt-rg-22 en essayant la commande suivante:
 
 ```python
 az network public-ip show --resource-group mbt-rg-22 --name SECURITYDIRECTOR
@@ -752,7 +752,7 @@ Code: AuthorizationFailed
 
 On peut voir que l’authorization échoue 
 
-Après avoir bien lister les ressources et les réponses de insomnia je vois un —name qui est égale à SECURITYDIRECTORip304 je vais essayer de refaire la commande avec cette valeur et bingo la commande réussit et nous renvoies les informations
+Après avoir bien listé les ressources et les réponses de insomnia je vois un —name qui est égal à SECURITYDIRECTORip304 je vais essayer de refaire la commande avec cette valeur et bingo la commande réussit et nous renvoie les informations:
 
 ```python
 az network public-ip show --resource-group mbt-rg-22 --name SECURITYDIRECTORip304
@@ -787,7 +787,7 @@ az network public-ip show --resource-group mbt-rg-22 --name SECURITYDIRECTORip30
 On a donc notre adresse ip ==20.127.161.82==
 La prochaine étape est de trouver une porte d’entrée pour se connecter donc voir si on peut se connecter avec des outils comme evilWinRM ou en rdp etc…
 
-Un port souvent ouvert pour la connexion a distance est le port 3389 qui est le port RDP par défaut
+Un port souvent ouvert pour la connexion à distance est le port 3389 qui est le port RDP par défaut:
 
 ![image.png](Image/image%2019.png)
 
@@ -795,7 +795,7 @@ On se connecte avec evil-WinRM
 
 ![image.png](Image/image%2020.png)
 
-La première choses à faire est de regarder les droits de notre utilisateur ainsi que les differents utilisateur avec la commande Whoami /all et net users
+La première chose à faire est de regarder les droits de notre utilisateur ainsi que les differents utilisateurs avec la commande Whoami /all et net users
 
 ![image.png](Image/image%2021.png)
 
@@ -807,21 +807,21 @@ Enumerons ces droits
 
 ![image.png](Image/image%2023.png)
 
-On peut voir que c’est le directeur de la sécurité et que donc des informations très sensible peuvent être disponible sur l’appareil.
+On peut voir que c’est le directeur de la sécurité et que donc des informations très sensibles peuvent être disponible sur l’appareil.
 
-Essayons de télécharger un logiciel comme Winpeas pour la élévation de privilèges
+Essayons de télécharger un logiciel comme Winpeas pour l'élévation de privilèges
 
-En faisant la commande menu on peut voir que on peut upload un fichier/dossier
+En faisant la commande menu on peut voir qu'on peut upload un fichier/dossier
 
 En amont il faut donc télécharger l’executable sur le github suivant https://github.com/peass-ng/PEASS-ng/releases
 
 ![image.png](Image/image%2024.png)
 
-On va se rendre dans le C:/Temp qui est un dossier souvent utilisés pour télécharger des fichiers on va s’y rendre , on voit dans le dossier qu’il se trouve le fichier flag.txt
+On va se rendre dans le C:/Temp qui est un dossier souvent utilisé pour télécharger des fichiers. On voit dans le dossier qu’il y a le fichier flag.txt
 
 ![https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif?cid=790b7611hidw7r3897ffhn2iv5m0zg9xlts8btb0i68ttihe&ep=v1\_gifs\_search&rid=giphy.gif&ct=g](https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif?cid=790b7611hidw7r3897ffhn2iv5m0zg9xlts8btb0i68ttihe&ep=v1\_gifs\_search&rid=giphy.gif&ct=g)
 
-On a donc finis le chall
+On a donc terminé le chall
 
 Mais pour voir on va quand même exécuter notre executable
 
@@ -831,7 +831,7 @@ On execute winPEAS
 
 ![image.png](Image/image%2026.png)
 
-La seule choses intéressantes que nous remonte winpeas ce sont que notre utilisateur a tous les droits sur pscp.exe
+La seule chose intéressante que nous remonte winpeas est que notre utilisateur a tous les droits sur pscp.exe
 
 ![image.png](Image/image%2027.png)
 
