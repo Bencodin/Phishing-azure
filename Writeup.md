@@ -138,11 +138,11 @@ Celui ci nous donne plusieurs informations sur les sécurités mise en place, le
 
 On peut se renseigner aussi via les différentes requêtes effectués sur le site web grace notamment a burpsuite.
 
-Qui nous permet dans l’onglet de gauche les differentes urls requêtés 
+Dans l’onglet de gauche on peut voir les differentes urls requêtés 
 
-et en bas le request et le response sur dans notre cas sur l’url par défaut `https://internationnal-am.com` 
+En bas les requêtes et les réponses 
 
-on peut notamment déjà avoir un aperçu niveau sécurité en regarder les headers de sécurité mise en place sur le site web
+On peut notamment déjà avoir un aperçu niveau sécurité en regarder les headers de sécurité mise en place sur le site web
 
 On y voit plusieurs fichier html comme `about.html`, `contact.html` , `portal.html` on peut se rendre sur chacun de ces sites pour en vérifier le contenu.
 
