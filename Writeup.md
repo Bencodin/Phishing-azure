@@ -108,7 +108,7 @@ Pour confirmer que l’entreprise utilise office 365 et azure on peut utiliser *
  - Cette IP est géolocalisée à Boydton, une ville connue pour héberger des **datacenters de Microsoft Azure**.
  - Cela indique que cette IP est probablement associée à un service Azure Cloud.
 
-On peut croiser l’information avec un autre outil connus comme shodan , fofa , etc.. qui nous renvois sensiblement les même information 
+On peut croiser l’information avec d'autres outils connus comme shodan , fofa , etc.. qui nous renvoient sensiblement les mêmes informations 
 
 ![image.png](Image/image%204.png)
 
