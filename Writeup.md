@@ -20,9 +20,9 @@ Notre client **International Asset Management** nous a mandatés pour une missio
 
 Notre premiere etape est de prendre des renseignements sur ce domaine.
 
-![Capture d’écran du 2025-01-07 13-34-12.png](Image/Capture_dcran_du_2025-01-07_13-34-12.png))
+![Capture d’écran du 2025-01-07 13-34-12.png](Image/Capture_dcran_du_2025-01-07_13-34-12.png)
 
-Différente information nous sont données que l’on peut scindé en 4 record différent
+Différente information nous sont données que l’on peut scinder en 4 record différent
 
 ### 1. **A Records**
 
