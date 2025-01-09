@@ -78,7 +78,7 @@ On peut voir que on ai que sur du passif , et sublist3r va regarder sur les diff
 
 Nous allons utiliser l’argument -b pour faire un bruteforce de sous-domaine
 
-il va donc utilise le module subbrute 
+Il va donc utilise le module subbrute 
 
 ### Fonctionnement du module subbrute
 
